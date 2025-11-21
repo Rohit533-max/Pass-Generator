@@ -18,7 +18,7 @@ def sign_handler(message):
     text = "What's your zodiac sign?\nChoose one: *Aries*, *Taurus*, *Gemini*, *Cancer*, *Leo*, *Virgo*, *Libra*, *Scorpio*, *Sagittarius*, *Capricorn*,*Aquariius*, and *Pisces*."
     sent_msg = bot.send_message(message.chat.id, text, parse_mode = "Markdown")
     bot.register_next_step_handler(sent_msg, day_handler) # type: ignore
-    bot.reply_to(message, message.text)
+    #bot.reply_to(message, message.text) #This is the repeat command message
 
 
 def get_daily_horoscope(sign: str, day: str) -> dict:
